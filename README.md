@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+﻿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Trila React desafio 2
 
-## Available Scripts
+Desafio feito com react.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Tecnologias Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+* [React](https://react.dev/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como rodar o projeto ✅
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1 - Clone o repositório.
 
-### `npm run eject`
+2 - Instale as dependências:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3 - Execute o projeto:
+```
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📌 Desafio 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O desafio consiste em criar a parte lógica por trás do botão remover. Ao clicar no botão remover, deve ativar uma função que irá remover o repositório em questão, conforme o id.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ✅ Experiência
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Não tive dificuldades, o desafio em si é simples, o intuito é conseguir mais familiaridade com o framework e seu funcionamento.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Alterei o botão de remover, era uma tag de âncora, alterei para uma tag 'button' porque o mesmo não levava a nenhum link.
 
-### Analyzing the Bundle Size
+Alterei um pouco o CSS dos botões para ficar mais visível, o foco do desafio é a parte lógica.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Alterei a lógica quando você clica para buscar o dado na API. Se o usuário escrever um dado que não existe, aparece um 'alert' com erro, e se escrever um dado que já existe na tela, ele dispara outro 'alert' avisando.
 
-### Making a Progressive Web App
+## Observação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para adicionar um respositório na tela é preciso digitar '{nome_de_usuario}/{nome_do_projeto'.
+Exemplo: 
+``
+joao-leao/trilha-react-desafio-2
+``
