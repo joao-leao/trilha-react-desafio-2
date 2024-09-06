@@ -16,27 +16,35 @@ function App() {
 
   const handleSearchRepo = async () => {
 
-    const {data} = await api.get(`repos/${currentRepo}`)
+    if(!currentRepo){
+      alert('Informe um endereço de repositório')
+      return;
+    }
+    try{
+      const {data} = await api.get(`repos/${currentRepo}`)
+      if(!data.id || data.id === 0){
+        alert('Repositório não existe')
+        return;
+      } else {
+        const isExist = repos.find(repo => repo.id === data.id);
 
-    if(data.id){
-
-      const isExist = repos.find(repo => repo.id === data.id);
-
-      if(!isExist){
+        if(!isExist){
         setRepos(prev => [...prev, data]);
         setCurrentRepo('')
         return
-      }
-
+        }
+        alert('Repositório já foi adicionado')
     }
-    alert('Repositório não encontrado')
-
-  }
+      }catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao buscar os dados. Tente novamente.');
+    }}
+  
 
   const handleRemoveRepo = (id) => {
     console.log('Removendo registro', id);
-
-    // utilizar filter.
+    const updatedRepos = repos.filter(repo => repo.id !== id)
+    setRepos(updatedRepos)
   }
 
 
